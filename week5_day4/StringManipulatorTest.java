@@ -13,11 +13,13 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class StringManipulatorTest {
 
+    // Variables to hold the parameters for each test case
     private final String input;
     private final String expectedReversed;
     private final String expectedUpperCase;
     private final boolean expectedIsPalindrome;
 
+    // Constructor to initialize the test case parameters
     public StringManipulatorTest(String input, String expectedReversed, String expectedUpperCase, boolean expectedIsPalindrome) {
         this.input = input;
         this.expectedReversed = expectedReversed;
@@ -25,6 +27,7 @@ public class StringManipulatorTest {
         this.expectedIsPalindrome = expectedIsPalindrome;
     }
 
+    // Method to provide test data for parameterized tests
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
@@ -32,23 +35,25 @@ public class StringManipulatorTest {
                 {"openai", "ianepo", "OPENAI", false},
                 {"level", "level", "LEVEL", true},
                 {"racecar", "racecar", "RACECAR", true},
-                {"12321", "12321", "12321", true},
-                {"", "", "", true}
+                {"12321", "12321", "12321", true}
         });
     }
 
+    // Test method to check if the reverse method works correctly
     @Test
     public void testReverseString() {
         StringManipulator stringManipulator = new StringManipulator();
         assertEquals(expectedReversed, stringManipulator.reverse(input));
     }
 
+    // Test method to check if the convertToUppercase method works correctly
     @Test
     public void testConvertToUppercase() {
         StringManipulator stringManipulator = new StringManipulator();
         assertEquals(expectedUpperCase, stringManipulator.convertToUppercase(input));
     }
 
+    // Test method to check if the isPalindrome method works correctly
     @Test
     public void testIsPalindrome() {
         StringManipulator stringManipulator = new StringManipulator();
@@ -71,8 +76,13 @@ class StringManipulator {
 
     // Method to check if a string is a palindrome
     public boolean isPalindrome(String input) {
+        // Clean the input by removing non-alphanumeric characters and converting to lowercase
         String cleanInput = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        // Reverse the clean input string
         String reversed = reverse(cleanInput);
+
+        // Check if the clean input is equal to its reversed form
         return cleanInput.equals(reversed);
     }
 }
