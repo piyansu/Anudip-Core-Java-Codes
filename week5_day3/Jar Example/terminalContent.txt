@@ -1,0 +1,18 @@
+####################### MY TERMINAL'S TEXTS ##################################
+First terminal inside test - 
+s\User\Desktop\Anudip\23. W5S3 - JAN 22 (maven)\assignment_2\src\org\anudip\test>javac -d bin JarExample.java
+
+C:\Users\User\Desktop\Anudip\23. W5S3 - JAN 22 (maven)\assignment_2\src\org\anudip\test>
+
+Second terminal from project -
+C:\Users\User\Desktop\Anudip\23. W5S3 - JAN 22 (maven)\assignment_2>jar -cfvm JarExample.jar manifest.txt -C bin .
+added manifest
+adding: org/(in = 0) (out= 0)(stored 0%)
+adding: org/anudip/(in = 0) (out= 0)(stored 0%)
+adding: org/anudip/test/(in = 0) (out= 0)(stored 0%)
+adding: org/anudip/test/JarExample.class(in = 455) (out= 313)(deflated 31%)
+
+C:\Users\User\Desktop\Anudip\23. W5S3 - JAN 22 (maven)\assignment_2>java -jar JarExample.jar
+Successfully executed Jar
+
+C:\Users\User\Desktop\Anudip\23. W5S3 - JAN 22 (maven)\assignment_2>

@@ -1,0 +1,42 @@
+1. first make your file sturcture like this
+
+project/
+|-- src/
+|   `-- org/
+|       `-- aundip/
+|           `-- test/
+|               `-- JarExample.java
+|-- manifest.txt
+`-- bin/ [here we will keep our class file after compilation]
+
+2. go inside test folder, create JarExample.java file and paste this code:
+package org.anudip.test;
+
+/**creating class named JarExample to print “Successfully executed Jar
+on successful compilation and run.
+*/
+
+public class JarExample{
+	public static void main(String[] args){
+		System.out.println("Successfully executed Jar");
+	}
+}
+
+2. now then open cmd at this location (inside test folder)
+   and type command: javac JarExample.java
+   this will produce a JarExample.class file cut and paste that inside bin.
+
+3. create manifest.txt file inside project folder if not already then paste:
+Main-Class: org.anudip.test.JarExample
+[leave a newline at end in manifest file]
+
+4. now run this cmd to make jar file of JarExample.class file inside bin and
+   including the manifest inside it.
+   command: jar -cfvm JarExample.jar manifest.txt -C bin . [include this dot at end]
+
+5. now as you have created the jar file then let's run it .
+   command: java -jar JarExample.jar
+   output: Successfully executed Jar
+
+
+
