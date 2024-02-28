@@ -1,0 +1,11 @@
+ Task 1 :
+ JDBC stands for Java Database Connectivity and serves to provide a standard interface for connecting Java applications to relational databases.
+
+Task 2 :
+The DriverManager manages database drivers, the Connection interface represents a session with the database, the Statement interface executes SQL queries, and the ResultSet interface navigates and retrieves query results. They work together to connect to a database and retrieve data.
+
+Task 3 :
+Three types of JDBC drivers are:
+1. Type 1: JDBC-ODBC Bridge - connects Java applications to ODBC-accessible databases.
+2. Type 2: Native-API - uses a database-specific native API for improved performance.
+3. Type 4: Pure Java Driver - directly communicates with the database server without native libraries, providing platform-independent and high-performance database connectivity.  
